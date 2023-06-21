@@ -1,0 +1,15 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+@use "../functions" as *;
+@use "../responsive" as *;
+
+main {
+  width: 100%;
+  padding: gap(3);
+  border: 01px solid $gray-200;
+  border-radius: $border-radius;
+
+  @include for-tablet-landscape-up {
+    width: 50%;
+  }
+}

@@ -16,11 +16,14 @@
 
 // COMPONENTS
 @use "./components/header";
-// @use "./components/button";
+@use "./components/main";
+@use "./components/aside";
+@use "./components//form";
+@use "./components/button";
+@use "./components/card";
 // @use "./components/expenseItem";
 @use "./components/footer";
 // @use "./components/section";
-// @use "./components/form";
 // @use "./components//filter";
 // @use "./components/fileItem";
 // @use "./components/card";

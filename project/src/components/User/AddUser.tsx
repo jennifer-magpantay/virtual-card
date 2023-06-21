@@ -80,8 +80,8 @@ export const AddUser = ({ onSubmitNewUser, initialState }: AddUserProps) => {
           value={userInput.social}
           id="social"
           type="text"
-          label="Git Hub"
-          placeholder="Git Hub url"
+          label="Social"
+          placeholder="Social media url"
           onChange={(event) => handleInputChange(event)}
         />
       </UserForm>

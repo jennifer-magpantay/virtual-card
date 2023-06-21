@@ -1,0 +1,16 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+@use "../functions" as *;
+@use "../responsive" as *;
+
+aside {
+  width: 100%;
+  height: 100%;
+  //padding: gap(3);
+  // border: 01px solid $gray-100;
+  // border-radius: $border-radius;
+
+  @include for-tablet-landscape-up {
+    width: 50%;
+  }
+}
