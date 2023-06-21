@@ -1,6 +1,6 @@
 interface UseFormProps {
   children: React.ReactNode;
-  onSubmit: () => void;
+  onSubmit: (event: React.FormEvent) => void;
 }
 import { Button } from "../../UI/Button";
 

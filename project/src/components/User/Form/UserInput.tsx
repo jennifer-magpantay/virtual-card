@@ -1,19 +1,21 @@
-import { useState } from "react";
-
 interface UserInputProps {
   id: string;
-  type: "text" | "number" | "email";
+  type: "text" | "number" | "email" ;
+  value: string;
   label: string;
   placeholder: string;
+  isRequired?: boolean;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
-export const UserInput = ({ label, id, type, placeholder }: UserInputProps) => {
-  const [state, setState] = useState("");
-
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { value } = event.target;
-    setState(value);
-  };
-
+export const UserInput = ({
+  label,
+  id,
+  type,
+  value,
+  placeholder,
+  isRequired,
+  onChange,
+}: UserInputProps) => {
   return (
     <>
       <label htmlFor={id}>{label}</label>
@@ -21,10 +23,10 @@ export const UserInput = ({ label, id, type, placeholder }: UserInputProps) => {
         type={type}
         name={id}
         id={id}
-        value={state}
+        value={value}
         placeholder={placeholder}
-        required
-        onChange={(event) => handleInputChange(event)}
+        required={isRequired}
+        onChange={onChange}
       />
     </>
   );
