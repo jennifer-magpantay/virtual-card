@@ -3,7 +3,7 @@ import { Logo } from "./Logo";
 export const Header = () => {
   return (
     <header>
-      <Logo color="#0c26aa" />
+      <Logo color="#2546f0" />
     </header>
   );
 };
