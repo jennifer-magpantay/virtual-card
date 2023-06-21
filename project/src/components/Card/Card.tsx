@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 import { UserProps } from "../../App";
 import CardLogo from "./CardLogo";
 
@@ -8,9 +6,10 @@ interface CardProps {
 }
 
 export const Card = ({ user }: CardProps) => {
-  const { name, surname, company, position, email, social } = user;
+  const { name, surname, company, position, email, social, id } = user;
 
   const generateQRCode = (social: string, pixels: string) => {
+    // https://goqr.me/
     const encodeSocialUrl = encodeURI(social);
     const URL_API = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeSocialUrl}&size=${pixels}x${pixels}`;
 
@@ -43,7 +42,7 @@ export const Card = ({ user }: CardProps) => {
         </div>
 
         <div className="card--body-id">
-          <p className="title id">ID:XXXXX</p>
+          <p className="title id">ID:{id}</p>
         </div>
       </div>
       <div className="card--footer">
@@ -61,7 +60,7 @@ export const Card = ({ user }: CardProps) => {
         )}
       </div>
 
-      <p className="title id center">ID:XXXXX</p>
+      <p className="title id center">ID:{id}</p>
     </div>
   );
 };

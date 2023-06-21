@@ -13,10 +13,13 @@ export const AddUser = ({ onSubmitNewUser, initialState }: AddUserProps) => {
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { id, value } = event.target;
+    const randomID = String(Date.now()).slice(-5);
+
     setUserInput((prevState) => {
       return {
         ...prevState,
         [id]: value,
+        id: randomID,
       };
     });
   };

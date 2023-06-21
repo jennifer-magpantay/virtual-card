@@ -14,6 +14,7 @@ export interface UserProps {
   position: string;
   email: string;
   social: string;
+  id: string;
 }
 const INITIAL_STATE: UserProps = {
   name: "",
@@ -22,6 +23,7 @@ const INITIAL_STATE: UserProps = {
   company: "",
   position: "",
   social: "",
+  id: "",
 };
 
 const MOCK_USER: UserProps = {
@@ -31,7 +33,9 @@ const MOCK_USER: UserProps = {
   company: "Publicis Sapient",
   position: "Front End | React",
   social: "",
+  id: "XXXXX",
 };
+// https://github.com/jennifer-magpantay
 export const App = () => {
   const [user, setUser] = useState<UserProps>(MOCK_USER);
 
